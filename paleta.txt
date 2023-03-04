@@ -1,0 +1,40 @@
+Funcão Das cores 
+
+. Contraste
+. Hierarquia
+. Informação
+.Identidade
+
+Interface
+
+cor de Base 
+
+Saturação baixa 
+cores com saturação baixa (tons de ciza) são as cores mais ultilizadas nas intefaces. Elas irão compor a base de fundos. titulos, corpo de texto e mais. A saturação apenas aumenta quando diminui o brilho.
+
+A base é formada por textos, formularios, links secundarios , fundos: tons de cinza
+
+Tons de cinza 
+interfaces de aplicativos como facebook, youtube, instagran, nubank, tinder, netflix e outrs geralmente ultilizam tons de cinza (neutro ou frio) como a cor de base
+
+Qual ultilizar?
+Aplicativos para uso diario use tons de cinza. Explore outros tons em site promoconal/institucional, mas pode usar tons de cinza sem problrmas
+
+==============================================================
+
+Cor de Ênfase 
+Titulo, botões ícones, fundos, linkes: cor da Identidade
+
+Funcionais
+Alerta, erros, notificações links: verde, vermelho amarelo
+
+Ênfase 
+
+Identidade
+geralmente é baseada na identidade da marca EX; A Amazon ultiliza o laranja como com de ênfase e já as americanas ultiliza o vermelho
+
+Contraste
+Serve para destacar-mos titulos, botões e outros elementos importates
+
+Influencia na cor base
+Dependendo do projeto a cor de ênfase pode influenciar diretamente a cor da base mudando um tom de cinza neutro para um tom de cinza esverdiado
