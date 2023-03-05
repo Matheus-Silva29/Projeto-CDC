@@ -277,6 +277,81 @@ ul {
 
 /*-FINAL CARD BOTAO-*/
 
+/* INICIO SEVICOS */
+
+.planos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0px;
+}
+
+.planos h2 {
+  font-size: 40px;
+  color: #1e0101;
+  position: relative;
+}
+
+.planos > p {
+  font-size: 20px;
+  margin-bottom: 60px;
+  max-width: 50ch;
+  color: #292929;
+}
+
+.planos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+}
+
+.planos-conteudo {
+  padding: 30px;
+  border-left: 5px solid transparent;
+}
+
+.planos-conteudo:hover {
+  border-left: 5px solid #cc3233;
+}
+
+.planos-conteudo i {
+  font-size: 50px;
+  color: #cc3233;
+}
+
+.planos-conteudo h2 {
+  font-size: 28px;
+  color: #1e0101;
+  margin-bottom: 15px;
+}
+
+.planos-conteudo h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 5px;
+  background: #cc3233;
+  right: -60px;
+  top: 10px;
+}
+
+.planos-conteudo p {
+  color: #0e0000;
+  line-height: 1.5;
+}
+
+.planos-imagem {
+  background-image: url(./imagem/saude.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.imagem-2 {
+  background-image: url(./imagem/empresarios.jpg);
+  grid-column: 2;
+}
+
 @media (max-width: 800px) {
   .header {
     max-width: 600px;
@@ -291,6 +366,10 @@ ul {
     padding: 10px 10px;
     border-radius: 5px;
     font-size: 16px;
+  }
+
+  .header-menu a::after {
+    display: none;
   }
 
   .tratamentos-bg {
@@ -395,28 +474,49 @@ ul {
     display: none;
   }
 
+  .hero {
+    justify-content: end;
+    align-items: start;
+    padding: 15px 30px;
+  }
+
   .hero h1 {
-    font-size: 50px;
     margin-bottom: 5px;
+    max-width: 10ch;
   }
 
   .hero p {
     max-width: 34ch;
-    text-align: center;
-    margin-bottom: 10px;
+    text-align: left;
+    margin-bottom: 20px;
   }
 
   .tratamentos {
-    padding: 30px;
+    padding: 10px 30px;
+  }
+
+  .tratamentos h2 {
+    max-width: 20ch;
+  }
+
+  .tratamentos p {
+    margin-bottom: 20px;
+    font-size: 18px;
   }
 
   .tratamentos-card {
     flex-wrap: nowrap;
     overflow-x: scroll;
-    gap: 30px;
+    overflow-y: scroll;
+    height: 230px;
+    width: 100%;
+  }
+
+  .card {
+    height: 500px;
   }
   .tratamentos-card-conteudo {
-    padding: 5px 40px;
+    padding: 5px 20px;
   }
 
   .tratamentos-card-conteudo p {
@@ -428,7 +528,7 @@ ul {
   }
 }
 
-@media (max-width: 453px) {
+@media (max-width: 400px) {
   .hero {
     justify-content: end;
     align-items: start;
@@ -443,5 +543,14 @@ ul {
   .hero p {
     max-width: initial;
     text-align: initial;
+  }
+
+  .tratamentos h2 {
+    font-size: 30px;
+    max-width: 100%;
+  }
+
+  .tratamentos p {
+    max-width: 30ch;
   }
 }
