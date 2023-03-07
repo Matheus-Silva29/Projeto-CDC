@@ -285,54 +285,59 @@ ul {
   padding: 40px 0px;
 }
 
-.planos h2 {
+.planos > h2 {
   font-size: 40px;
   color: #1e0101;
   position: relative;
 }
 
+.planos span {
+  color: #cc3233;
+  letter-spacing: 2px;
+}
+
 .planos > p {
   font-size: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   max-width: 50ch;
   color: #292929;
 }
 
+.planos ul {
+  border: 1px solid #e6e6e6;
+}
 .planos-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 20px;
-}
-
-.planos-conteudo {
-  padding: 30px;
+  margin-bottom: 40px;
+  align-items: center;
   border-left: 5px solid transparent;
 }
 
-.planos-conteudo:hover {
+.planos-grid:hover {
   border-left: 5px solid #cc3233;
+}
+
+.planos-conteudo {
+  padding-right: 30px;
+  padding-left: 15px;
+}
+
+.planos-grid:nth-child(2) .planos-conteudo {
+  padding-right: 0px;
+  padding-left: 30px;
 }
 
 .planos-conteudo i {
   font-size: 50px;
-  color: #cc3233;
+  color: #bababa;
+  margin-bottom: 5px;
 }
 
 .planos-conteudo h2 {
   font-size: 28px;
   color: #1e0101;
   margin-bottom: 15px;
-}
-
-.planos-conteudo h2::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 60px;
-  height: 5px;
-  background: #cc3233;
-  right: -60px;
-  top: 10px;
 }
 
 .planos-conteudo p {
@@ -345,11 +350,16 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  height: 400px;
 }
 
-.imagem-2 {
-  background-image: url(./imagem/empresarios.jpg);
-  grid-column: 2;
+.planos-grid:nth-child(2) .planos-imagem {
+  background-image: url("./imagem/empresarios.jpg");
+  background-position: top center;
+}
+
+.planos-grid:nth-child(3) .planos-imagem {
+  background-image: url("./imagem/pessoalimpre.jpg");
 }
 
 @media (max-width: 800px) {
