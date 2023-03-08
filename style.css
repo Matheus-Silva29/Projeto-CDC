@@ -362,6 +362,127 @@ ul {
   background-image: url("./imagem/pessoalimpre.jpg");
 }
 
+.contato {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contato-localizacao {
+  background: linear-gradient(#7e0d0d, #b22122);
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
+.contato-localizacao h2 {
+  color: #ffff;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.contato-localizacao li {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  padding-left: 0px;
+  gap: 15px;
+}
+
+.contato-localizacao i {
+  color: #e85657;
+  font-size: 20px;
+}
+
+.contato-localizacao p {
+  color: #fafafa;
+}
+
+.contato-formulario {
+  background: #fafafa;
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
+.contato-formulario span {
+  color: #cc3233;
+}
+
+.contato-formulario h2 {
+  color: #0e0000;
+  max-width: 36ch;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.contato-dados > div {
+  padding: 10px 0px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.contato-dados label {
+  display: block;
+  margin-bottom: 5px;
+  color: #0e0000;
+  font-size: 18px;
+  position: relative;
+}
+
+.contato label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 5px;
+  background: #cc3233;
+  top: 7px;
+  left: -25px;
+}
+
+.contato-dados input {
+  padding: 8px;
+  width: 350px;
+  border: 2px solid #e6e6e6;
+  background: #fafafa;
+  border-radius: 5px;
+  outline: none;
+  font-size: 17px;
+}
+
+.contato-dados input:focus {
+  border-color: skyblue;
+  background: #ffffff;
+}
+
+.contato-dados textarea {
+  width: 350px;
+  border: 2px solid #e6e6e6;
+  background: #fafafa;
+  border-radius: 5px;
+  outline: none;
+}
+
+.contato-dados textarea:focus {
+  border-color: skyblue;
+  background: #ffffff;
+}
+
+.contato-dados button {
+  padding: 15px 45px;
+  font-size: 18px;
+  border: 1px solid #e85657;
+  background: linear-gradient(#7e0d0d, #b22122);
+  color: #ffffff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: block;
+}
+
+.contato-dados button:hover {
+  background: linear-gradient(#b22122, #7e0d0d);
+}
 @media (max-width: 800px) {
   .header {
     max-width: 600px;
@@ -407,6 +528,50 @@ ul {
 
   .card {
     width: 290px;
+  }
+
+  .planos {
+    max-width: 600px;
+  }
+
+  .planos-grid {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .planos-conteudo {
+    padding: 10px;
+  }
+
+  .planos-grid:nth-child(2) .planos-conteudo {
+    padding: 10px;
+  }
+
+  .planos-conteudo h2 {
+    font-size: 22px;
+  }
+
+  .planos-conteudo i {
+    font-size: 40px;
+  }
+
+  .contato {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    gap: 40px;
+  }
+
+  .contato-mapa {
+    width: 400px;
+    overflow: hidden;
+  }
+
+  .contato-localizacao {
+    border-radius: 5px;
+  }
+
+  .contato-formulario {
+    border-radius: 10px;
   }
 }
 
@@ -536,9 +701,42 @@ ul {
   .tratamentos-card-botao a {
     padding: 0px 10px;
   }
+
+  .planos {
+    margin: 0;
+    padding: 10px 30px;
+  }
+
+  .planos > h2 {
+    font-size: 35px;
+  }
+
+  .planos > p {
+    font-size: 18px;
+    max-width: 35ch;
+    margin-bottom: 25px;
+  }
+
+  .planos-grid {
+    border-left: none;
+    margin-bottom: 20px;
+  }
+
+  .planos-grid:hover {
+    border-left: none;
+  }
+
+  .planos-imagem {
+    height: 500px;
+  }
+
+  .contato {
+    padding: 0px 27px;
+    margin: 0;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
   .hero {
     justify-content: end;
     align-items: start;
@@ -562,5 +760,70 @@ ul {
 
   .tratamentos p {
     max-width: 30ch;
+  }
+
+  .planos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planos-imagem {
+    display: none;
+  }
+
+  .contato-mapa {
+    width: 330px;
+  }
+
+  .contato-dados > div {
+    padding: 5px;
+  }
+
+  .contato-dados input {
+    width: 250px;
+  }
+
+  .contato-dados textarea {
+    width: 250px;
+  }
+
+  .contato-dados button {
+    padding: 15px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 326px) {
+  .contato-localizacao li {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-bottom: 12px;
+  }
+  .contato-mapa {
+    display: none;
+  }
+
+  .contato-localizacao {
+    padding-bottom: 20px;
+  }
+  .contato-localizacao i {
+    font-size: 35px;
+  }
+
+  .contato-formulario {
+    padding: 5px;
+  }
+
+  .contato-formulario h2 {
+    font-size: 25px;
+  }
+
+  .contato-dados > div {
+    padding: 0;
+  }
+
+  .contato-dados input,
+  .contato-dados textarea {
+    width: 200px;
   }
 }
