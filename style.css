@@ -20,8 +20,8 @@ ul {
 /*-INICO HEADER-*/
 
 .header-bg {
-  background: #7e0d0d;
-  border-bottom: 1px solid #9e1516;
+  background: #cc3233;
+  border-bottom: 1px solid #7e0d0d;
 }
 
 .header {
@@ -44,7 +44,7 @@ ul {
 }
 
 .logomarca p {
-  color: #e6e6e6;
+  color: #fafafa;
 }
 
 /*-FINAL LOGO-*/
@@ -62,7 +62,7 @@ ul {
 
   font-size: 18px;
   text-transform: uppercase;
-  color: #e6e6e6;
+  color: #fafafa;
   position: relative;
 }
 
@@ -70,7 +70,7 @@ ul {
   content: "";
   width: 0%;
   height: 2px;
-  background: #e6e6e6;
+  background: #fafafa;
   display: block;
   position: absolute;
   transition: 0.3s;
@@ -127,12 +127,12 @@ ul {
   text-transform: uppercase;
   font-weight: 500;
   z-index: 1;
-  background: #7e0d0d;
+  background: #cc3233;
   color: #e6e6e6;
   display: block;
   padding: 15px 25px;
   border-radius: 5px;
-  border: 1px solid #cc3233;
+  border: 1px solid #b22122;
   transition: 0.5s;
 }
 
@@ -146,7 +146,7 @@ ul {
 /*-INICIO SEÇÃO TRATAMENTOS-*/
 
 .tratamentos-bg {
-  background: linear-gradient(#7e0d0d 460px, #e6e6e6 0);
+  background: linear-gradient(#cc3233 460px, #fafafa 0);
 }
 
 .tratamentos {
@@ -367,6 +367,7 @@ ul {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 15px;
 }
 
 .contato-localizacao {
@@ -476,12 +477,72 @@ ul {
   color: #ffffff;
   border-radius: 5px;
   text-transform: uppercase;
+  letter-spacing: 2px;
   cursor: pointer;
   display: block;
 }
 
 .contato-dados button:hover {
   background: linear-gradient(#b22122, #7e0d0d);
+}
+
+.footer-bg {
+  border-top: 1px solid #cc3233;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 20px;
+  color: #0e0000;
+  margin-bottom: 20px;
+}
+
+.footer ul {
+  display: flex;
+  gap: 30px;
+}
+
+.footer li {
+  font-size: 40px;
+  padding: 10px 15px;
+  color: #bababa;
+  border-radius: 8px;
+  transition: 0.8s;
+  cursor: pointer;
+}
+
+.facebook:hover {
+  background: #1771e6;
+  color: #ffff;
+  padding: 12px 17px;
+}
+
+.whatsapp:hover {
+  background: #23a017;
+  color: #ffff;
+  padding: 12px 17px;
+}
+
+.instagran:hover {
+  background: #e3007c;
+  color: #ffff;
+  padding: 12px 17px;
+}
+
+.twitter:hover {
+  background: #1c99e6;
+  color: #ffff;
+  padding: 12px 17px;
 }
 @media (max-width: 800px) {
   .header {
