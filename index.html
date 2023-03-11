@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./imagem/favicon.ico" type="image/x-icon">
   <title>Clinica do coração</title>
   <meta name="description" content="A melhor clínica em tratamentos cardíacos da america latina.">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animacao.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <script src="https://kit.fontawesome.com/42a9e8cebf.js" crossorigin="anonymous"></script>
 </head>
@@ -32,9 +34,17 @@
   </header>
 
   <div class="hero">
-    <h1>Clinica do Coração</h1>
-    <p>A melhor clinica em tratamentos cardiacos do mundo.</p>
-    <a href="#">Saiba mais</a>
+    <div class="hero-conteudo">
+      <h1 class="fadeInLeft" data-anime="200">Clinica do Coração</h1>
+      <p class="fadeInLeft" data-anime="400">A melhor clinica em tratamentos cardiacos da America Latina.</p>
+      <a href="#" class="fadeInLeft" data-anime="600">Saiba mais</a>
+    </div>
+    <ul class="hero-redes">
+      <li class="fadeInDown" data-anime="800"><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+      <li class="fadeInDown" data-anime="600"><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+      <li class="fadeInDown" data-anime="400"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+      <li class="fadeInDown" data-anime="200"><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+    </ul>
     <div class="hero-overlay"></div>
   </div>
 
@@ -165,7 +175,7 @@
 
   <footer class="footer-bg">
     <div class="footer">
-      <p>Clinica Do Coração © | Feito Por Matheus Silva 2023</p>
+      <p data-anime="400">Clinica Do Coração © | Feito Por Matheus Silva 2023</p>
       <ul>
         <li class="facebook"><i class="fa-brands fa-facebook-f"></i></li>
         <li class="whatsapp"><i class="fa-brands fa-whatsapp"></i></li>
@@ -174,6 +184,7 @@
       </ul>
     </div>
   </footer>
+  <script src="./js/plugins/simple-anime.js"></script>;
   <script src="./js/script.js"></script>
 </body>
 

@@ -90,39 +90,30 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  width: 100%;
   position: relative;
+  padding: 0px 80px;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr auto;
   justify-content: center;
   align-items: center;
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #141414;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
+.hero-conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
 }
 
-.hero h1 {
+.hero-conteudo h1 {
   font-size: 60px;
   color: #ffffff;
   z-index: 1;
+  letter-spacing: 3px;
 }
 
-.hero p {
-  z-index: 1;
-  font-size: 18px;
-  color: #d1d1d1;
-  margin-bottom: 35px;
-}
-
-.hero a {
+.hero-conteudo a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
@@ -136,9 +127,64 @@ ul {
   transition: 0.5s;
 }
 
-.hero a:hover {
-  background: #cc3233;
+.hero-conteudo a:hover {
+  background: #b22122;
   color: #ffffff;
+}
+
+.hero-conteudo p {
+  z-index: 1;
+  font-size: 18px;
+  color: #d1d1d1;
+  margin-bottom: 35px;
+}
+
+.hero-redes {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-redes li a {
+  background: #e85657;
+  color: #fff;
+  opacity: 0.3;
+  border: 1px solid #919191;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 22px;
+  display: block;
+  transition: 0.5s;
+}
+
+.hero-redes li a:hover {
+  background: #1771e6;
+  color: #ffffff;
+  border-color: transparent;
+  opacity: 1;
+}
+
+.hero-redes li:nth-child(2) a:hover {
+  background: #23a017;
+}
+
+.hero-redes li:nth-child(3) a:hover {
+  background: #e3007c;
+}
+
+.hero-redes li:nth-child(4) a:hover {
+  background: #1c99e6;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #141414;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
 }
 
 /*-FINAL HERO-*/
@@ -503,7 +549,7 @@ ul {
 
 .footer p {
   font-size: 20px;
-  color: #0e0000;
+  color: #3d3d3d;
   margin-bottom: 20px;
 }
 
@@ -524,25 +570,21 @@ ul {
 .facebook:hover {
   background: #1771e6;
   color: #ffff;
-  padding: 12px 17px;
 }
 
 .whatsapp:hover {
   background: #23a017;
   color: #ffff;
-  padding: 12px 17px;
 }
 
 .instagran:hover {
   background: #e3007c;
   color: #ffff;
-  padding: 12px 17px;
 }
 
 .twitter:hover {
   background: #1c99e6;
   color: #ffff;
-  padding: 12px 17px;
 }
 @media (max-width: 800px) {
   .header {
@@ -554,7 +596,7 @@ ul {
   }
 
   .header-menu a {
-    background: #9e1516;
+    background: #b22122;
     padding: 10px 10px;
     border-radius: 5px;
     font-size: 16px;
@@ -564,8 +606,16 @@ ul {
     display: none;
   }
 
+  .hero-conteudo h1 {
+    max-width: 10ch;
+  }
+
+  .hero-redes {
+    display: none;
+  }
+
   .tratamentos-bg {
-    background: #e6e6e6;
+    background: #fafafa;
   }
 
   .tratamentos {
@@ -578,7 +628,7 @@ ul {
   }
 
   .tratamentos p {
-    color: #292929;
+    color: #525252;
   }
 
   .tratamentos-card {
@@ -593,6 +643,10 @@ ul {
 
   .planos {
     max-width: 600px;
+  }
+
+  .planos p {
+    color: #525252;
   }
 
   .planos-grid {
@@ -629,6 +683,10 @@ ul {
 
   .contato-localizacao {
     border-radius: 5px;
+  }
+
+  .contato-mapa {
+    height: 300px;
   }
 
   .contato-formulario {
@@ -679,14 +737,14 @@ ul {
     display: block;
     top: 65px;
     z-index: 2;
-    padding-left: 20px;
+    padding: 0px 20px;
     background: blue;
     right: 0px;
     width: 100%;
     height: 0px;
     transition: 0.6s;
     position: absolute;
-    background: #7e0d0d;
+    background: #cc3233;
     visibility: hidden;
     overflow-y: hidden;
   }
@@ -711,9 +769,13 @@ ul {
   }
 
   .hero {
+    padding: 15px 25px;
+  }
+
+  .hero-conteudo {
     justify-content: end;
     align-items: start;
-    padding: 15px 30px;
+    height: 100%;
   }
 
   .hero h1 {
@@ -795,6 +857,10 @@ ul {
     padding: 0px 27px;
     margin: 0;
   }
+
+  .contato-mapa {
+    height: 250px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -833,6 +899,7 @@ ul {
 
   .contato-mapa {
     width: 330px;
+    height: 200px;
   }
 
   .contato-dados > div {
@@ -850,6 +917,23 @@ ul {
   .contato-dados button {
     padding: 15px;
     width: 100%;
+  }
+
+  .footer {
+    max-width: 600px;
+  }
+
+  .footer p {
+    font-size: 16px;
+  }
+
+  .footer ul {
+    gap: 10px;
+  }
+
+  .footer li {
+    padding: 5px 10px;
+    font-size: 30px;
   }
 }
 
@@ -886,5 +970,10 @@ ul {
   .contato-dados input,
   .contato-dados textarea {
     width: 200px;
+  }
+
+  .footer p {
+    font-size: 15px;
+    max-width: 35ch;
   }
 }

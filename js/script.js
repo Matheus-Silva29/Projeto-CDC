@@ -8,3 +8,8 @@ function toggleMenu() {
 }
 
 btnMobile.addEventListener("click", toggleMenu);
+
+// Animação
+if (window.SimpleAnime) {
+  new SimpleAnime();
+}
