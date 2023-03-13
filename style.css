@@ -408,6 +408,9 @@ ul {
   background-image: url("./imagem/pessoalimpre.jpg");
 }
 
+/* FINAL CERVICOS */
+
+/* INICIO CONTATO */
 .contato {
   max-width: 1200px;
   margin: 0 auto;
@@ -444,7 +447,6 @@ ul {
 .contato-localizacao p {
   color: #fafafa;
 }
-
 .contato-formulario {
   background: #fafafa;
   padding: 20px;
@@ -532,6 +534,10 @@ ul {
   background: linear-gradient(#b22122, #7e0d0d);
 }
 
+/* FINAL CONTATO */
+
+/* INIVIO FOOTER */
+
 .footer-bg {
   border-top: 1px solid #cc3233;
 }
@@ -586,6 +592,10 @@ ul {
   background: #1c99e6;
   color: #ffff;
 }
+
+/* FINAL FOOTER */
+
+/* INICIO RESPONSIVO MOBILE */
 @media (max-width: 800px) {
   .header {
     max-width: 600px;
@@ -681,16 +691,8 @@ ul {
     overflow: hidden;
   }
 
-  .contato-localizacao {
-    border-radius: 5px;
-  }
-
   .contato-mapa {
     height: 300px;
-  }
-
-  .contato-formulario {
-    border-radius: 10px;
   }
 }
 
@@ -773,7 +775,7 @@ ul {
   }
 
   .hero-conteudo {
-    justify-content: end;
+    justify-content: center;
     align-items: start;
     height: 100%;
   }
@@ -867,17 +869,11 @@ ul {
   .hero {
     justify-content: end;
     align-items: start;
-    padding: 30px;
   }
 
   .hero h1 {
     font-size: 50px;
     max-width: 9ch;
-  }
-
-  .hero p {
-    max-width: initial;
-    text-align: initial;
   }
 
   .tratamentos h2 {
@@ -897,9 +893,21 @@ ul {
     display: none;
   }
 
+  .contato {
+    margin: 0;
+    padding: 0px;
+  }
+
+  .contato-localizacao {
+    padding: 30px;
+  }
+
   .contato-mapa {
-    width: 330px;
-    height: 200px;
+    width: 300px;
+  }
+
+  .contato-formulario {
+    padding: 30px;
   }
 
   .contato-dados > div {
@@ -907,7 +915,7 @@ ul {
   }
 
   .contato-dados input {
-    width: 250px;
+    width: 100%;
   }
 
   .contato-dados textarea {
@@ -952,11 +960,7 @@ ul {
     padding-bottom: 20px;
   }
   .contato-localizacao i {
-    font-size: 35px;
-  }
-
-  .contato-formulario {
-    padding: 5px;
+    font-size: 25px;
   }
 
   .contato-formulario h2 {
@@ -969,7 +973,7 @@ ul {
 
   .contato-dados input,
   .contato-dados textarea {
-    width: 200px;
+    width: 100%;
   }
 
   .footer p {
@@ -977,3 +981,5 @@ ul {
     max-width: 35ch;
   }
 }
+
+/* FINAL RESPONSIVO MOBILE */
