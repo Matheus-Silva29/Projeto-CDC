@@ -143,13 +143,11 @@ ul {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 17px;
 }
 
 .hero-redes li a {
-  background: #e85657;
-  color: #fff;
-  opacity: 0.3;
+  color: #e6e6e6;
   border: 1px solid #919191;
   border-radius: 5px;
   padding: 15px 25px;
