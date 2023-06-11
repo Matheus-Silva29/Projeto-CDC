@@ -19,19 +19,26 @@ ul {
 
 /*-INICO HEADER-*/
 
-.header-bg {
-  background: #cc3233;
-  border-bottom: 1px solid #7e0d0d;
+.header {
+  width: 100%;
+  z-index: 3;
+  position: fixed;
+  padding: 30px 0px;
+  transition: 0.7s;
 }
 
-.header {
+.header.ativar {
+  background: #cc3233;
+  padding: 5px 0px;
+}
+
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px;
-  gap: 30px;
 }
 
 /*-FINAL HEADER-*/
@@ -41,6 +48,11 @@ ul {
 .logomarca h1 {
   color: #fafafa;
   letter-spacing: 5px;
+}
+
+.header.ativar .logomarca h1 {
+  color: #fafafa;
+  font-weight: bold;
 }
 
 .logomarca p {
@@ -69,14 +81,22 @@ ul {
 .header-menu a::after {
   content: "";
   width: 0%;
-  height: 2px;
-  background: #fafafa;
+  height: 3px;
+  background: #cc3233;
   display: block;
   position: absolute;
   transition: 0.3s;
 }
 
+.header.ativar .header-menu a::after {
+  background: #fafafa;
+}
+
 .header-menu a:hover::after {
+  width: 100%;
+}
+
+.header-menu a.menu-ativo::after {
   width: 100%;
 }
 
@@ -85,7 +105,7 @@ ul {
 /*-INICIO HERO*/
 
 .hero {
-  height: calc(100vh - 76px);
+  height: 100vh;
   background-image: url(./imagem/medico.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -196,7 +216,7 @@ ul {
 .tratamentos {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 0px;
+  padding: 100px 0px;
 }
 
 .tratamentos h2 {
@@ -326,7 +346,7 @@ ul {
 .planos {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 0px;
+  padding: 75px 0px;
 }
 
 .planos > h2 {
@@ -412,6 +432,7 @@ ul {
 .contato {
   max-width: 1200px;
   margin: 0 auto;
+  padding-top: 70px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 15px;
@@ -595,12 +616,12 @@ ul {
 
 /* INICIO RESPONSIVO MOBILE */
 @media (max-width: 800px) {
-  .header {
-    max-width: 600px;
-  }
-
   .header-menu {
     gap: 10px;
+  }
+
+  .header-container {
+    max-width: 600px;
   }
 
   .header-menu a {
@@ -628,7 +649,7 @@ ul {
 
   .tratamentos {
     max-width: 600px;
-    padding: 30px 0px;
+    padding: 70px 0px;
   }
 
   .tratamentos h2 {
@@ -700,7 +721,8 @@ ul {
     width: 20px;
     border-top: 2px solid #e6e6e6;
     position: absolute;
-    right: 30px;
+    right: 15px;
+    top: 18px;
   }
 
   .btn-mobile::after,
@@ -728,17 +750,23 @@ ul {
     top: 0px;
   }
 
+  .header-container {
+    padding: 0px 15px;
+    position: relative;
+  }
   .header {
-    margin: 0px 30px;
-    padding: 10px 0px;
+    padding: 15px 0px;
+    transition: 0.6s;
   }
 
+  .header.active {
+    background: #cc3233;
+  }
   .header-menu {
     display: block;
-    top: 65px;
+    top: 50px;
     z-index: 2;
     padding: 0px 20px;
-    background: blue;
     right: 0px;
     width: 100%;
     height: 0px;
@@ -790,7 +818,7 @@ ul {
   }
 
   .tratamentos {
-    padding: 10px 30px;
+    padding: 70px 30px;
   }
 
   .tratamentos h2 {
@@ -827,7 +855,7 @@ ul {
 
   .planos {
     margin: 0;
-    padding: 10px 30px;
+    padding: 70px 30px;
   }
 
   .planos > h2 {
@@ -854,16 +882,41 @@ ul {
   }
 
   .contato {
-    padding: 0px 27px;
+    padding: 70px 27px;
     margin: 0;
   }
 
   .contato-mapa {
     height: 250px;
   }
+
+  [data-anima] {
+    opacity: 0;
+    transition: 0.4s;
+  }
+
+  [data-anima="left"] {
+    transform: translate3d(50px, 0, 0);
+  }
+
+  [data-anima="rigth"] {
+    transform: translate3d(-50px, 0, 0);
+  }
+
+  [data-anima].animacao {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
 }
 
 @media (max-width: 425px) {
+  .header {
+    padding: 15px 0px;
+  }
+  .btn-mobile {
+    right: 20px;
+    top: 18px;
+  }
   .hero {
     justify-content: end;
     align-items: start;
@@ -893,7 +946,6 @@ ul {
 
   .contato {
     margin: 0;
-    padding: 0px;
   }
 
   .contato-localizacao {
@@ -927,6 +979,7 @@ ul {
 
   .footer {
     max-width: 600px;
+    text-align: center;
   }
 
   .footer p {
@@ -940,6 +993,14 @@ ul {
   .footer li {
     padding: 5px 10px;
     font-size: 30px;
+  }
+
+  [data-anima="left"] {
+    transform: translate3d(30px, 0, 0);
+  }
+
+  [data-anima="rigth"] {
+    transform: translate3d(-30px, 0, 0);
   }
 }
 
@@ -974,6 +1035,10 @@ ul {
     width: 100%;
   }
 
+  .footer {
+    text-align: center;
+  }
+
   .footer p {
     font-size: 15px;
     max-width: 35ch;
@@ -981,3 +1046,36 @@ ul {
 }
 
 /* FINAL RESPONSIVO MOBILE */
+
+/* Animar card */
+
+.js-scroll {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: 0.7s;
+}
+
+.js-scroll.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (min-width: 800px) {
+  [data-anima] {
+    opacity: 0;
+    transition: 0.4s;
+  }
+
+  [data-anima="left"] {
+    transform: translate3d(-50px, 0, 0);
+  }
+
+  [data-anima="rigth"] {
+    transform: translate3d(50px, 0, 0);
+  }
+
+  [data-anima].animacao {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+}

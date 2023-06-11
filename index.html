@@ -15,25 +15,25 @@
 </head>
 
 <body>
-  <header class="header-bg">
-    <div class="header">
+  <div class="header">
+    <section class="header-container" id="home">
       <div class="logomarca">
         <h1>CDC</h1>
         <P>tratamentos cardiacos.</P>
       </div>
-      <nav class="nav">
+      <nav class="nav js-menu">
         <span class="btn-mobile"></span>
         <ul class="header-menu">
-          <li><a href="#">Home</a></li>
+          <li><a href="#home">Home</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#planos">planos</a></li>
           <li><a href="#contato">contato</a></li>
         </ul>
       </nav>
-    </div>
-  </header>
+    </section>
+  </div>
 
-  <div class="hero">
+  <section class="hero" id="home">
     <div class="hero-conteudo">
       <h1 class="fadeInLeft" data-anime="200">Clinica do Coração</h1>
       <p class="fadeInLeft" data-anime="400">A melhor clinica em tratamentos cardiacos da America Latina.</p>
@@ -46,14 +46,14 @@
       <li class="fadeInDown" data-anime="200"><a href=""><i class="fa-brands fa-twitter"></i></a></li>
     </ul>
     <div class="hero-overlay"></div>
-  </div>
+  </section>
 
-  <section class="tratamentos-bg">
-    <div class="tratamentos" id="servicos">
+  <div class="tratamentos-bg">
+    <section class="tratamentos js-animacao" id="servicos">
       <h2>Melhores tratamentos cardiacos da america latina.</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dicta quidem sit, incidunt obcaecati modi eveniet non.</p>
       <ul class="tratamentos-card">
-        <li class="card">
+        <li class="card js-scroll">
           <div class="imagem"></div>
           <div class="tratamentos-card-conteudo">
             <h1>Medicamentos</h1>
@@ -63,7 +63,7 @@
             <a href="">➜</a>
           </div>
         </li>
-        <li class="card">
+        <li class="card js-scroll">
           <div class="imagem"></div>
           <div class="tratamentos-card-conteudo">
             <h1>Procedimentos cirúrgicos</h1>
@@ -73,7 +73,7 @@
             <a href="">➜</a>
           </div>
         </li>
-        <li class="card">
+        <li class="card js-scroll">
           <div class="imagem"></div>
           <div class="tratamentos-card-conteudo">
             <h1>Dispositivos</h1>
@@ -83,7 +83,7 @@
             <a href="">➜</a>
           </div>
         </li>
-        <li class="card">
+        <li class="card js-scroll">
           <div class="imagem"></div>
           <div class="tratamentos-card-conteudo">
             <h1>Diagnóstico</h1>
@@ -94,40 +94,41 @@
           </div>
         </li>
       </ul>
-    </div>
-  </section>
+    </section>
+  </div>
 
-  <section class="planos" id="planos">
+  <section class="planos js-animacao" id="planos">
     <h2> <span>CDC</span> Planos</h2>
     <p>Faça uma cotação e economize com seu plano de saúde. Faça a portabilidade e não tenha carência.</p>
     <ul>
       <li class="planos-grid">
-        <div class="planos-conteudo">
+        <div class="planos-conteudo" data-anima="left">
           <i class="fa fa-users"></i>
           <h2> <span>CDC</span> Saude Coletivo Por Adesão</h2>
           <p>A CDC dispõe de planos individuais coletivos por adesão em parceria com a Administradora de Benefícios. Para contratação do mesmo, é necessário ser filiado a alguma entidade de classe. Apresentando documentos pessoais dos beneficiários e o comprovante de elegibilidade você contrata seu plano de forma eficiente e por um excelente custo benefício! Contrate agora seu plano CDC Saúde na Rota Seguros de Uberlândia!</p>
         </div>
-        <div class="planos-imagem"></div>
+        <div class="planos-imagem" data-anima="rigth"></div>
       </li>
       <li class="planos-grid">
-        <div class="planos-imagem"></div>
-        <div class="planos-conteudo">
+        <div class="planos-imagem" data-anima="left"></div>
+        <div class="planos-conteudo" data-anima="rigth">
           <i class="fa-solid fa-user-tie"></i>
           <h2> <span>CDC</span> Saúde Empresarial</h2>
           <p>A CDC possui o plano de saúde ideal para sua empresa! Dispomos de planos empresariais a partir de 02 vidas, sendo na modalidade de 02 a 29 vidas ou 30 a 99 vidas. A contratação se estende a funcionários, sócios e dependentes como: cônjuges, filhos, enteados, pai, mãe, irmão, padrasto, madrasta, netos e até sobrinhos. Para contratação para Empresários MEI faz-se necessário o mínimo de 180 dias de abertura do CNPJ. Consulte condições!</p>
         </div>
       </li>
       <li class="planos-grid">
-        <div class="planos-conteudo">
+        <div class="planos-conteudo" data-anima="left">
           <i class="fa-solid fa-user"></i>
           <h2> <span>CDC</span>Individual e Empresarial</h2>
           <p>Planos cardiologos completos e eficientes... A CDC disponibiliza a seus clientes uma ampla rede de cardiologistas, com acesso fácil e uma contratação totalmente online para melhor atendê-lo.</p>
         </div>
-        <div class="planos-imagem"></div>
+        <div class="planos-imagem" data-anima="rigth"></div>
       </li>
     </ul>
   </section>
-  <section class="contato" id="contato">
+
+  <section class="contato js-animacao" id="contato">
     <div class="contato-localizacao">
       <h2>Conheça nossa clinica.</h2>
       <ul>
